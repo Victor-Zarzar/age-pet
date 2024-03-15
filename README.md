@@ -18,7 +18,7 @@ Project Clone
 
 Enter in directory:
 
-     cd shopping-flutter
+     cd age-pet
 
 Open in your favorite editor(e.g. VSCode):
 

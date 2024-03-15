@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Idade do Pet',
       theme: ThemeData(
-        useMaterial3: true,
+        useMaterial3: false,
       ),
       home: const IntroPage(),
     );
