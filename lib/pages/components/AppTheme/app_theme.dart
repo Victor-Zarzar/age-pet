@@ -18,5 +18,5 @@ class FontTextColor {
 class ButtonColor {
   ButtonColor._();
 
-  static Color get primaryColor => const Color(0xFF9E9E9E);
+  static Color get primaryColor => const Color(0xFF607D8B);
 }

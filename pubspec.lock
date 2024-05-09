@@ -91,19 +91,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_web_plugins:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
-  go_router:
-    dependency: transitive
+  getwidget:
+    dependency: "direct main"
     description:
-      name: go_router
-      sha256: b465e99ce64ba75e61c8c0ce3d87b66d8ac07f0b35d0a7e0263fcfc10f99e836
+      name: getwidget
+      sha256: "91df14a8d80e21f3ec02759295b90cc8badb8a872b90d34ad4aeb4085d833b5c"
       url: "https://pub.dev"
     source: hosted
-    version: "13.2.5"
+    version: "4.0.0"
   google_fonts:
     dependency: "direct main"
     description:
@@ -160,14 +155,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
-  logging:
-    dependency: transitive
-    description:
-      name: logging
-      sha256: "623a88c9594aa774443aa3eb2d41807a48486b5613e67599fb4c41c0ad47c340"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -248,14 +235,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
-  persistent_bottom_nav_bar_v2:
-    dependency: "direct main"
-    description:
-      name: persistent_bottom_nav_bar_v2
-      sha256: c725f11e0c3d5dad388f8eb9bcfbf701d1a472cad71d2b5fb344ac149e3da7ff
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.2.3"
   platform:
     dependency: transitive
     description:

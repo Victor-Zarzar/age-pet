@@ -3,6 +3,7 @@ import "package:age_pet/pages/components/AppAssets/app_assets.dart";
 import "package:age_pet/pages/components/AppTheme/app_theme.dart";
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
+import 'package:getwidget/getwidget.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -36,38 +37,24 @@ class _IntroPageState extends State<IntroPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: myWidth * 0.14),
-              child: GestureDetector(
-                onTap: () {
+              padding: const EdgeInsets.symmetric(vertical: 60),
+              child: GFButton(
+                onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomePage()),
+                  );
                 },
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: myWidth * 0.05, vertical: myHeight * 0.030),
-                  child: Container(
-                    width: myWidth * 0.6,
-                    height: myHeight * 0.05,
-                    decoration: BoxDecoration(
-                      color: ButtonColor.primaryColor,
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Página Inicial",
-                        style: GoogleFonts.jetBrainsMono(
-                          textStyle: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                            color: FontTextColor.secondaryColor,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                text: "Iniciar",
+                textStyle: TextStyle(
+                  color: FontTextColor.secondaryColor,
+                  fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                  fontSize: 14,
                 ),
+                color: ButtonColor.primaryColor,
+                shape: GFButtonShape.pills,
+                size: GFSize.LARGE,
+                blockButton: true,
               ),
             ),
           ],
