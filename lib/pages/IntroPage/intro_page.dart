@@ -48,7 +48,7 @@ class _IntroPageState extends State<IntroPage> {
                   padding: EdgeInsets.symmetric(
                       horizontal: myWidth * 0.05, vertical: myHeight * 0.030),
                   child: Container(
-                    width: myWidth * 0.4,
+                    width: myWidth * 0.6,
                     height: myHeight * 0.05,
                     decoration: BoxDecoration(
                       color: ButtonColor.primaryColor,
