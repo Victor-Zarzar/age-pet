@@ -1,5 +1,7 @@
+import "package:age_pet/pages/components/AppAssets/app_assets.dart";
 import "package:age_pet/pages/components/AppTheme/app_theme.dart";
 import "package:flutter/material.dart";
+import "package:google_fonts/google_fonts.dart";
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -15,6 +17,25 @@ class _IntroPageState extends State<IntroPage> {
     double myWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppTheme.primaryColor,
+      body: SizedBox(
+        height: myHeight,
+        width: myWidth,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            ImageOne.asset(),
+            Text(
+              "Calcule a Idade do Seu Pet",
+              style: GoogleFonts.jetBrainsMono(
+                textStyle: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
