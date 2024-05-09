@@ -1,3 +1,4 @@
+import "package:age_pet/pages/HomePage/home_page.dart";
 import "package:age_pet/pages/components/AppAssets/app_assets.dart";
 import "package:age_pet/pages/components/AppTheme/app_theme.dart";
 import "package:flutter/material.dart";
@@ -28,8 +29,44 @@ class _IntroPageState extends State<IntroPage> {
               "Calcule a Idade do Seu Pet",
               style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(
-                  fontSize: 14,
+                  fontSize: 17,
                   fontWeight: FontWeight.bold,
+                  color: FontTextColor.primaryColor,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: myWidth * 0.14),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePage()));
+                },
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: myWidth * 0.05, vertical: myHeight * 0.030),
+                  child: Container(
+                    width: myWidth * 0.4,
+                    height: myHeight * 0.05,
+                    decoration: BoxDecoration(
+                      color: ButtonColor.primaryColor,
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Página Inicial",
+                        style: GoogleFonts.jetBrainsMono(
+                          textStyle: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: FontTextColor.secondaryColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
