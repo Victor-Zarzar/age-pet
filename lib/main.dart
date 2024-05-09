@@ -1,4 +1,4 @@
-import 'package:age_pet/pages/intro_page.dart';
+import 'package:age_pet/pages/IntroPage/intro_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
