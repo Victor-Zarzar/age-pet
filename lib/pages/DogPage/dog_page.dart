@@ -55,6 +55,15 @@ class _DogPageState extends State<DogPage> {
             const SizedBox(height: 10),
             GFButton(
               onPressed: () {
+                if (humanAgeController.text.isEmpty ||
+                    weightController.text.isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Por favor, preencha todos os campos.'),
+                    ),
+                  );
+                  return;
+                }
                 setState(() {
                   int humanAge = int.parse(humanAgeController.text);
                   double weight = double.parse(weightController.text);
