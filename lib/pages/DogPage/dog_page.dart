@@ -1,3 +1,4 @@
+import 'package:age_pet/components/AppAssets/app_assets.dart';
 import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -29,11 +30,7 @@ class _DogPageState extends State<DogPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'lib/assets/dog.png',
-                height: myHeight * 0.15,
-                width: myWidth * 0.40,
-              ),
+             ImageThree.asset(),
               const SizedBox(height: 20),
               Text(
                 'Idade do Cachorro',
