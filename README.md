@@ -6,6 +6,7 @@
 
 - Dart
 - Flutter
+- Get Widget UI
 - Google Fonts
 
 <br />
