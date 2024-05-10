@@ -26,7 +26,7 @@ class _CatPageState extends State<CatPage> {
         height: myHeight,
         width: myWidth,
         child: Padding(
-          padding: const EdgeInsets.all(50),
+          padding: const EdgeInsets.all(60),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -89,6 +89,7 @@ class _CatPageState extends State<CatPage> {
                 },
                 color: ButtonColor.primaryColor,
                 shape: GFButtonShape.pills,
+                fullWidthButton: true,
                 text: "Calcular",
                 textStyle: TextStyle(
                   color: FontTextColor.secondaryColor,
