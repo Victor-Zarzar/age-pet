@@ -24,63 +24,95 @@ class _CatPageState extends State<CatPage> {
       body: SizedBox(
         height: myHeight,
         width: myWidth,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset(
-              'lib/assets/cat.png',
-              height: myHeight * 0.15,
-              width: myWidth * 0.40,
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'Idade do Gato',
-              style: GoogleFonts.jetBrainsMono(),
-            ),
-            const SizedBox(height: 20),
-            TextFormField(
-              controller: humanAgeController,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                labelText: 'Idade Humana',
+        child: Padding(
+          padding: const EdgeInsets.all(50),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                'lib/assets/cat.png',
+                height: myHeight * 0.15,
+                width: myWidth * 0.40,
               ),
-            ),
-            TextFormField(
-              controller: weightController,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                labelText: 'Peso (kg)',
-              ),
-            ),
-            const SizedBox(height: 10),
-            GFButton(
-              onPressed: () {
-                if (humanAgeController.text.isEmpty ||
-                    weightController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text('Por favor, preencha todos os campos.'),
-                    ),
-                  );
-                  return;
-                }
-                setState(() {
-                  int humanAge = int.parse(humanAgeController.text);
-                  double weight = double.parse(weightController.text);
-                  felineAge = calculateFelineAge(humanAge, weight).round();
-                });
-              },
-              color: ButtonColor.primaryColor,
-              shape: GFButtonShape.pills,
-              text: "Calcular",
-              size: GFSize.LARGE,
-            ),
-            if (felineAge != null)
+              const SizedBox(height: 20),
               Text(
-                'Idade do Gato: $felineAge anos',
-                style: const TextStyle(fontSize: 18),
+                'Idade do Gato',
+                style: GoogleFonts.jetBrainsMono(
+                  textStyle: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: FontTextColor.primaryColor,
+                  ),
+                ),
               ),
-          ],
+              const SizedBox(height: 20),
+              TextFormField(
+                controller: humanAgeController,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  labelText: 'Idade Humana',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextFormField(
+                controller: weightController,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Peso (kg)',
+                ),
+              ),
+              const SizedBox(height: 10),
+              GFButton(
+                onPressed: () {
+                  if (humanAgeController.text.isEmpty ||
+                      weightController.text.isEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'Por favor, preencha todos os campos.',
+                          style: GoogleFonts.jetBrainsMono(
+                            textStyle: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: FontTextColor.secondaryColor,
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                    return;
+                  }
+                  setState(() {
+                    int humanAge = int.parse(humanAgeController.text);
+                    double weight = double.parse(weightController.text);
+                    felineAge = calculateFelineAge(humanAge, weight).round();
+                  });
+                },
+                color: ButtonColor.primaryColor,
+                shape: GFButtonShape.pills,
+                text: "Calcular",
+                textStyle: TextStyle(
+                  color: FontTextColor.secondaryColor,
+                  fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                  fontSize: 12,
+                ),
+                size: GFSize.LARGE,
+              ),
+              if (felineAge != null)
+                Text(
+                  'Idade do Gato: $felineAge anos',
+                  style: GoogleFonts.jetBrainsMono(
+                    textStyle: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: FontTextColor.primaryColor,
+                    ),
+                  ),
+                ),
+            ],
+          ),
         ),
       ),
     );
