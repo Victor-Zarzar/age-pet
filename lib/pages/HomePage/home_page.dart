@@ -1,4 +1,4 @@
-import 'package:age_pet/pages/components/AppTheme/app_theme.dart';
+import 'package:age_pet/components/AppTheme/app_theme.dart';
 import "package:flutter/material.dart";
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,6 +21,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    double myHeight = MediaQuery.of(context).size.height;
+    double myWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: GFAppBar(
         centerTitle: true,
@@ -37,10 +39,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         ),
         iconTheme: IconThemeData(color: FontTextColor.primaryColor),
       ),
-      body: GFTabBarView(controller: tabController, children: <Widget>[
-        Container(color: AppTheme.primaryColor),
-        Container(color: AppTheme.primaryColor),
-      ]),
+      body: SizedBox(
+        height: myHeight,
+        width: myWidth,
+        child: GFTabBarView(
+          controller: tabController,
+          children: <Widget>[
+            Container(color: AppTheme.primaryColor),
+            Container(color: AppTheme.primaryColor),
+          ],
+        ),
+      ),
       bottomNavigationBar: GFTabBar(
         length: 2,
         controller: tabController,

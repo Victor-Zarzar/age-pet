@@ -1,6 +1,6 @@
 import "package:age_pet/pages/HomePage/home_page.dart";
-import "package:age_pet/pages/components/AppAssets/app_assets.dart";
-import "package:age_pet/pages/components/AppTheme/app_theme.dart";
+import "package:age_pet/components/AppAssets/app_assets.dart";
+import "package:age_pet/components/AppTheme/app_theme.dart";
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 import 'package:getwidget/getwidget.dart';
