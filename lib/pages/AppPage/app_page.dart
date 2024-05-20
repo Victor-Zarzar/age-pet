@@ -5,14 +5,14 @@ import "package:flutter/material.dart";
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class AppPage extends StatefulWidget {
+  const AppPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<AppPage> createState() => _AppPageState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
   late TabController tabController;
 
   @override

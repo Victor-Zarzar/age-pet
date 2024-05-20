@@ -1,4 +1,4 @@
-import "package:age_pet/pages/HomePage/home_page.dart";
+import "package:age_pet/pages/AppPage/app_page.dart";
 import "package:age_pet/components/AppAssets/app_assets.dart";
 import "package:age_pet/components/AppTheme/app_theme.dart";
 import "package:flutter/material.dart";
@@ -42,7 +42,7 @@ class _IntroPageState extends State<IntroPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
+                    MaterialPageRoute(builder: (context) => const AppPage()),
                   );
                 },
                 text: "Iniciar",

@@ -25,82 +25,16 @@ class _DogPageState extends State<DogPage> {
       body: SizedBox(
         height: myHeight,
         width: myWidth,
-        child: Padding(
-          padding: const EdgeInsets.all(60),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-             ImageThree.asset(),
-              const SizedBox(height: 20),
-              Text(
-                'Idade do Cachorro',
-                style: GoogleFonts.jetBrainsMono(
-                  textStyle: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: FontTextColor.primaryColor,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              TextFormField(
-                controller: humanAgeController,
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Idade Humana',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 10),
-              TextFormField(
-                controller: weightController,
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Peso (kg)',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 10),
-              GFButton(
-                onPressed: () {
-                  if (humanAgeController.text.isEmpty ||
-                      weightController.text.isEmpty) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          'Por favor, preencha todos os campos.',
-                          style: GoogleFonts.jetBrainsMono(
-                            textStyle: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: FontTextColor.secondaryColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                    return;
-                  }
-                  setState(() {
-                    int humanAge = int.parse(humanAgeController.text);
-                    double weight = double.parse(weightController.text);
-                    canineAge = calculateCanineAge(humanAge, weight).round();
-                  });
-                },
-                color: ButtonColor.primaryColor,
-                shape: GFButtonShape.pills,
-                fullWidthButton: true,
-                text: "Calcular",
-                textStyle: TextStyle(
-                  color: FontTextColor.secondaryColor,
-                  fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
-                  fontSize: 12,
-                ),
-                size: GFSize.LARGE,
-              ),
-              if (canineAge != null)
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(60),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+               ImageThree.asset(),
+                const SizedBox(height: 20),
                 Text(
-                  'Idade do Cachorro: $canineAge anos',
+                  'Idade do Cachorro',
                   style: GoogleFonts.jetBrainsMono(
                     textStyle: TextStyle(
                       fontSize: 15,
@@ -109,7 +43,75 @@ class _DogPageState extends State<DogPage> {
                     ),
                   ),
                 ),
-            ],
+                const SizedBox(height: 20),
+                TextFormField(
+                  controller: humanAgeController,
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Idade Humana',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                TextFormField(
+                  controller: weightController,
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Peso (kg)',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                GFButton(
+                  onPressed: () {
+                    if (humanAgeController.text.isEmpty ||
+                        weightController.text.isEmpty) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            'Por favor, preencha todos os campos.',
+                            style: GoogleFonts.jetBrainsMono(
+                              textStyle: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: FontTextColor.secondaryColor,
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                      return;
+                    }
+                    setState(() {
+                      int humanAge = int.parse(humanAgeController.text);
+                      double weight = double.parse(weightController.text);
+                      canineAge = calculateCanineAge(humanAge, weight).round();
+                    });
+                  },
+                  color: ButtonColor.primaryColor,
+                  shape: GFButtonShape.pills,
+                  fullWidthButton: true,
+                  text: "Calcular",
+                  textStyle: TextStyle(
+                    color: FontTextColor.secondaryColor,
+                    fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                    fontSize: 12,
+                  ),
+                  size: GFSize.LARGE,
+                ),
+                if (canineAge != null)
+                  Text(
+                    'Idade do Cachorro: $canineAge anos',
+                    style: GoogleFonts.jetBrainsMono(
+                      textStyle: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: FontTextColor.primaryColor,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
           ),
         ),
       ),
