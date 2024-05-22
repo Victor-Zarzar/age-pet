@@ -38,9 +38,6 @@ dependencies:
   google_fonts: ^6.2.1
   getwidget: ^4.0.0
   easy_localization: ^3.0.7
-  flutter_localizations:
-    sdk: flutter
-  intl: any
 
 dev_dependencies:
   flutter_test:
