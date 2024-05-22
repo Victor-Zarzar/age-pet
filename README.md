@@ -41,4 +41,4 @@ Run the app:
 
 ### Version Android:
 
-<img src="assets/intropageandroid.png" alt="intro page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepagenadroid.png" alt="home page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageandroid2.png" alt="home page android 2" width="250">
+<img src="assets/intropageandroid.png" alt="intro page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageandroid.png" alt="home page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageandroid2.png" alt="home page android 2" width="250">
