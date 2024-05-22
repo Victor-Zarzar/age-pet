@@ -31,31 +31,33 @@ class _IntroPageState extends State<IntroPage> {
               "intro_title".tr(),
               style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(
-                  fontSize: 17,
+                  fontSize: 12,
                   fontWeight: FontWeight.bold,
                   color: FontTextColor.primaryColor,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 60),
-              child: GFButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AppPage()),
-                  );
-                },
-                text: "intro_button".tr(),
-                textStyle: TextStyle(
-                  color: FontTextColor.secondaryColor,
-                  fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
-                  fontSize: 14,
+              padding: const EdgeInsets.only(bottom: 40),
+              child: SizedBox(
+                height: 35,
+                width: 180,
+                child: GFButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AppPage()),
+                    );
+                  },
+                  text: "intro_button".tr(),
+                  textStyle: TextStyle(
+                    color: FontTextColor.secondaryColor,
+                    fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                    fontSize: 11,
+                  ),
+                  color: ButtonColor.primaryColor,
+                  shape: GFButtonShape.pills,
                 ),
-                color: ButtonColor.primaryColor,
-                shape: GFButtonShape.pills,
-                size: GFSize.LARGE,
-                blockButton: true,
               ),
             ),
           ],

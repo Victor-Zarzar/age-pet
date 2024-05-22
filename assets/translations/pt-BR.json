@@ -8,12 +8,12 @@
   "labelcat": "Idade Humana",
   "secondlabelcat": "Peso (kg)",
   "buttoncat": "Calcular",
-  "responsecat": "Idade do Gato - Anos",
+  "responsecat": "Idade - Anos",
   "validatecat": "Por favor, preencha todos os campos.",
   "textdog": "Idade do Cachorro",
   "labeldog": "Idade Humana",
   "secondlabeldog": "Peso (kg)",
   "buttondog": "Calcular",
   "validatedog": "Por favor, preencha todos os campos.",
-  "responsedog": "Idade do Cachorro - Anos"
+  "responsedog": "Idade - Anos"
 }

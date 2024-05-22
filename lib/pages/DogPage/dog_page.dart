@@ -32,82 +32,104 @@ class _DogPageState extends State<DogPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-               ImageThree.asset(),
+                ImageThree.asset(),
                 const SizedBox(height: 20),
                 Text(
                   'textdog'.tr(),
                   style: GoogleFonts.jetBrainsMono(
                     textStyle: TextStyle(
-                      fontSize: 15,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
                       color: FontTextColor.primaryColor,
                     ),
                   ),
                 ),
                 const SizedBox(height: 20),
-                TextFormField(
-                  controller: humanAgeController,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    labelText: 'labeldog'.tr(),
-                    border: const OutlineInputBorder(),
+                SizedBox(
+                  height: 50,
+                  width: 180,
+                  child: TextFormField(
+                    controller: humanAgeController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      labelText: 'labeldog'.tr(),
+                      labelStyle: const TextStyle(
+                        fontSize: 12,
+                      ),
+                      border: const OutlineInputBorder(),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 10),
-                TextFormField(
-                  controller: weightController,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    labelText: 'secondlabeldog'.tr(),
-                    border: const OutlineInputBorder(),
+                SizedBox(
+                  height: 50,
+                  width: 180,
+                  child: TextFormField(
+                    controller: weightController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      labelText: 'secondlabeldog'.tr(),
+                      labelStyle: const TextStyle(
+                        fontSize: 12,
+                      ),
+                      border: const OutlineInputBorder(),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 10),
-                GFButton(
-                  onPressed: () {
-                    if (humanAgeController.text.isEmpty ||
-                        weightController.text.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'validatedog'.tr(),
-                            style: GoogleFonts.jetBrainsMono(
-                              textStyle: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: FontTextColor.secondaryColor,
+                SizedBox(
+                  height: 35,
+                  width: 180,
+                  child: GFButton(
+                    onPressed: () {
+                      if (humanAgeController.text.isEmpty ||
+                          weightController.text.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'validatedog'.tr(),
+                              style: GoogleFonts.jetBrainsMono(
+                                textStyle: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: FontTextColor.secondaryColor,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      );
-                      return;
-                    }
-                    setState(() {
-                      int humanAge = int.parse(humanAgeController.text);
-                      double weight = double.parse(weightController.text);
-                      canineAge = calculateCanineAge(humanAge, weight).round();
-                    });
-                  },
-                  color: ButtonColor.primaryColor,
-                  shape: GFButtonShape.pills,
-                  fullWidthButton: true,
-                  text: "buttondog".tr(),
-                  textStyle: TextStyle(
-                    color: FontTextColor.secondaryColor,
-                    fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
-                    fontSize: 12,
+                        );
+                        return;
+                      }
+                      setState(() {
+                        int humanAge = int.parse(humanAgeController.text);
+                        double weight = double.parse(weightController.text);
+                        canineAge =
+                            calculateCanineAge(humanAge, weight).round();
+                      });
+                    },
+                    color: ButtonColor.primaryColor,
+                    shape: GFButtonShape.pills,
+                    fullWidthButton: true,
+                    text: "buttondog".tr(),
+                    textStyle: TextStyle(
+                      color: FontTextColor.secondaryColor,
+                      fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                      fontSize: 11,
+                    ),
+                    size: GFSize.LARGE,
                   ),
-                  size: GFSize.LARGE,
                 ),
                 if (canineAge != null)
-                  Text(
-                   '${'responsedog'.tr()}: $canineAge',
-                    style: GoogleFonts.jetBrainsMono(
-                      textStyle: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: FontTextColor.primaryColor,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 14),
+                    child: Text(
+                      '${'responsedog'.tr()}: $canineAge',
+                      style: GoogleFonts.jetBrainsMono(
+                        textStyle: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: FontTextColor.primaryColor,
+                        ),
                       ),
                     ),
                   ),

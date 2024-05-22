@@ -38,76 +38,98 @@ class _CatPageState extends State<CatPage> {
                   'textcat'.tr(),
                   style: GoogleFonts.jetBrainsMono(
                     textStyle: TextStyle(
-                      fontSize: 15,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
                       color: FontTextColor.primaryColor,
                     ),
                   ),
                 ),
                 const SizedBox(height: 20),
-                TextFormField(
-                  controller: humanAgeController,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    labelText: 'labelcat'.tr(),
-                    border: const OutlineInputBorder(),
+                SizedBox(
+                  height: 50,
+                  width: 180,
+                  child: TextFormField(
+                    controller: humanAgeController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      labelText: 'labelcat'.tr(),
+                      labelStyle: const TextStyle(
+                        fontSize: 12,
+                      ),
+                      border: const OutlineInputBorder(),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 10),
-                TextFormField(
-                  controller: weightController,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    labelText: 'secondlabelcat'.tr(),
+                SizedBox(
+                  height: 50,
+                  width: 180,
+                  child: TextFormField(
+                    controller: weightController,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText: 'secondlabelcat'.tr(),
+                      labelStyle: const TextStyle(
+                        fontSize: 12,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 10),
-                GFButton(
-                  onPressed: () {
-                    if (humanAgeController.text.isEmpty ||
-                        weightController.text.isEmpty) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text(
-                            'validatecat'.tr(),
-                            style: GoogleFonts.jetBrainsMono(
-                              textStyle: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: FontTextColor.secondaryColor,
+                SizedBox(
+                  height: 35,
+                  width: 180,
+                  child: GFButton(
+                    onPressed: () {
+                      if (humanAgeController.text.isEmpty ||
+                          weightController.text.isEmpty) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'validatecat'.tr(),
+                              style: GoogleFonts.jetBrainsMono(
+                                textStyle: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: FontTextColor.secondaryColor,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      );
-                      return;
-                    }
-                    setState(() {
-                      int humanAge = int.parse(humanAgeController.text);
-                      double weight = double.parse(weightController.text);
-                      felineAge = calculateFelineAge(humanAge, weight).round();
-                    });
-                  },
-                  color: ButtonColor.primaryColor,
-                  shape: GFButtonShape.pills,
-                  fullWidthButton: true,
-                  text: "buttoncat".tr(),
-                  textStyle: TextStyle(
-                    color: FontTextColor.secondaryColor,
-                    fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
-                    fontSize: 12,
+                        );
+                        return;
+                      }
+                      setState(() {
+                        int humanAge = int.parse(humanAgeController.text);
+                        double weight = double.parse(weightController.text);
+                        felineAge =
+                            calculateFelineAge(humanAge, weight).round();
+                      });
+                    },
+                    color: ButtonColor.primaryColor,
+                    shape: GFButtonShape.pills,
+                    fullWidthButton: true,
+                    text: "buttoncat".tr(),
+                    textStyle: TextStyle(
+                      color: FontTextColor.secondaryColor,
+                      fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                      fontSize: 11,
+                    ),
+                    size: GFSize.LARGE,
                   ),
-                  size: GFSize.LARGE,
                 ),
                 if (felineAge != null)
-                  Text(
-                  '${'responsecat'.tr()}: $felineAge',
-                    style: GoogleFonts.jetBrainsMono(
-                      textStyle: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: FontTextColor.primaryColor,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 14),
+                    child: Text(
+                      '${'responsecat'.tr()}: $felineAge',
+                      style: GoogleFonts.jetBrainsMono(
+                        textStyle: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: FontTextColor.primaryColor,
+                        ),
                       ),
                     ),
                   ),

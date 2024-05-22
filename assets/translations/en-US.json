@@ -8,12 +8,12 @@
   "labelcat": "Human Age",
   "secondlabelcat": "Weight (lb)",
   "buttoncat": "Calculate",
-  "responsecat": "Age Cat - Years",
+  "responsecat": "Age - Years",
   "validatecat": "Please fill in all fields.",
   "textdog": "Dog Age",
   "labeldog": "Human Age",
   "secondlabeldog": "Weight (lb)",
   "buttondog": "Calculate",
   "validatedog": "Please fill in all fields.",
-  "responsedog": "Age Dog - Years"
+  "responsedog": "Age - Years"
 }

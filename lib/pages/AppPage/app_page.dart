@@ -35,7 +35,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
           'text_appbar'.tr(),
           style: GoogleFonts.jetBrainsMono(
             textStyle: TextStyle(
-              fontSize: 17,
+              fontSize: 14,
               fontWeight: FontWeight.bold,
               color: FontTextColor.primaryColor,
             ),
@@ -55,22 +55,29 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
       ),
       bottomNavigationBar: GFTabBar(
         length: 2,
+        tabBarHeight: 60,
         controller: tabController,
         tabBarColor: TabBarColor.primaryColor,
         labelColor: FontTextColor.thirdColor,
         indicatorColor: FontTextColor.primaryColor,
         labelStyle: GoogleFonts.jetBrainsMono(
-          textStyle: const TextStyle(fontSize: 13),
+          textStyle: const TextStyle(fontSize: 11),
         ),
         tabs: [
           Tab(
-            icon: const Icon(Icons.pets),
+            icon: const Icon(
+              Icons.pets,
+              size: 20,
+            ),
             child: Text(
               'cat'.tr(),
             ),
           ),
           Tab(
-            icon: const Icon(Icons.pets),
+            icon: const Icon(
+              Icons.pets,
+              size: 20,
+            ),
             child: Text(
               'dog'.tr(),
             ),

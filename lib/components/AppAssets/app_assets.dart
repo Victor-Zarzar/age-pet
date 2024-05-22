@@ -4,7 +4,11 @@ class ImageOne {
   ImageOne._();
 
   static Image asset() {
-    return Image.asset('assets/pets.png');
+    return Image.asset(
+      'assets/pets.png',
+      height: 210,
+      width: 310,
+    );
   }
 }
 
@@ -14,8 +18,8 @@ class ImageTwo {
   static Image asset() {
     return Image.asset(
       'assets/cat.png',
-      height: 130,
-      width: 130,
+      height: 90,
+      width: 110,
     );
   }
 }
@@ -26,8 +30,8 @@ class ImageThree {
   static Image asset() {
     return Image.asset(
       'assets/dog.png',
-      height: 130,
-      width: 130,
+      height: 90,
+      width: 110,
     );
   }
 }
