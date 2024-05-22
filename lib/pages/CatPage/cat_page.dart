@@ -1,5 +1,6 @@
 import 'package:age_pet/components/AppAssets/app_assets.dart';
 import 'package:age_pet/components/AppTheme/app_theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,7 +35,7 @@ class _CatPageState extends State<CatPage> {
                 ImageTwo.asset(),
                 const SizedBox(height: 20),
                 Text(
-                  'Idade do Gato',
+                  'textcat'.tr(),
                   style: GoogleFonts.jetBrainsMono(
                     textStyle: TextStyle(
                       fontSize: 15,
@@ -47,18 +48,18 @@ class _CatPageState extends State<CatPage> {
                 TextFormField(
                   controller: humanAgeController,
                   keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Idade Humana',
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: 'labelcat'.tr(),
+                    border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
                   controller: weightController,
                   keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Peso (kg)',
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    labelText: 'secondlabelcat'.tr(),
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -69,7 +70,7 @@ class _CatPageState extends State<CatPage> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            'Por favor, preencha todos os campos.',
+                            'validatecat'.tr(),
                             style: GoogleFonts.jetBrainsMono(
                               textStyle: TextStyle(
                                 fontSize: 14,
@@ -91,7 +92,7 @@ class _CatPageState extends State<CatPage> {
                   color: ButtonColor.primaryColor,
                   shape: GFButtonShape.pills,
                   fullWidthButton: true,
-                  text: "Calcular",
+                  text: "buttoncat".tr(),
                   textStyle: TextStyle(
                     color: FontTextColor.secondaryColor,
                     fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
@@ -101,7 +102,7 @@ class _CatPageState extends State<CatPage> {
                 ),
                 if (felineAge != null)
                   Text(
-                    'Idade do Gato: $felineAge anos',
+                  '${'responsecat'.tr()}: $felineAge',
                     style: GoogleFonts.jetBrainsMono(
                       textStyle: TextStyle(
                         fontSize: 15,

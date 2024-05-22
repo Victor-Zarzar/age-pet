@@ -36,8 +36,8 @@ Run the app:
 
 ### Version iOS:
 
-<img src="lib/assets/intropageios.png" alt="intro page ios" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/homepageios.png" alt="home page ios" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/homepageios2.png" alt="home page ios 2" width="250">
+<img src="assets/intropageios.png" alt="intro page ios" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageios.png" alt="home page ios" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageios2.png" alt="home page ios 2" width="250">
 
 ### Version Android:
 
-<img src="lib/assets/intropageandroid.png" alt="intro page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/homepagenadroid.png" alt="home page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="lib/assets/homepageandroid2.png" alt="home page android 2" width="250">
+<img src="assets/intropageandroid.png" alt="intro page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepagenadroid.png" alt="home page android" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageandroid2.png" alt="home page android 2" width="250">

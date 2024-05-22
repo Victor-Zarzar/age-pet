@@ -1,0 +1,19 @@
+{
+  "intro_title": "Calculate your pet's age",
+  "intro_button": "Getting Started",
+  "text_appbar": "Pet Calculator",
+  "cat": "Cat",
+  "dog": "Dog",
+  "textcat": "Cat Age",
+  "labelcat": "Human Age",
+  "secondlabelcat": "Weight (lb)",
+  "buttoncat": "Calculate",
+  "responsecat": "Age Cat - Years",
+  "validatecat": "Please fill in all fields.",
+  "textdog": "Dog Age",
+  "labeldog": "Human Age",
+  "secondlabeldog": "Weight (lb)",
+  "buttondog": "Calculate",
+  "validatedog": "Please fill in all fields.",
+  "responsedog": "Age Dog - Years"
+}

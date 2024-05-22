@@ -1,6 +1,7 @@
 import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/pages/CatPage/cat_page.dart';
 import 'package:age_pet/pages/DogPage/dog_page.dart';
+import 'package:easy_localization/easy_localization.dart';
 import "package:flutter/material.dart";
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +32,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
         centerTitle: true,
         backgroundColor: AppTheme.primaryColor,
         title: Text(
-          'Calculadora Pet',
+          'text_appbar'.tr(),
           style: GoogleFonts.jetBrainsMono(
             textStyle: TextStyle(
               fontSize: 17,
@@ -61,17 +62,17 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
         labelStyle: GoogleFonts.jetBrainsMono(
           textStyle: const TextStyle(fontSize: 13),
         ),
-        tabs: const [
+        tabs: [
           Tab(
-            icon: Icon(Icons.pets),
+            icon: const Icon(Icons.pets),
             child: Text(
-              'Gato',
+              'cat'.tr(),
             ),
           ),
           Tab(
-            icon: Icon(Icons.pets),
+            icon: const Icon(Icons.pets),
             child: Text(
-              'Cachorro',
+              'dog'.tr(),
             ),
           ),
         ],

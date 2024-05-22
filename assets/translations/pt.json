@@ -1,0 +1,19 @@
+{
+  "intro_title": "Calcule a Idade do Seu Pet",
+  "intro_button": "Iniciar",
+  "text_appbar": "Calculadora Pet",
+  "cat": "Gato",
+  "dog": "Cachorro",
+  "textcat": "Idade do Gato",
+  "labelcat": "Idade Humana",
+  "secondlabelcat": "Peso (kg)",
+  "buttoncat": "Calcular",
+  "responsecat": "Idade do Gato - Anos",
+  "validatecat": "Por favor, preencha todos os campos.",
+  "textdog": "Idade do Cachorro",
+  "labeldog": "Idade Humana",
+  "secondlabeldog": "Peso (kg)",
+  "buttondog": "Calcular",
+  "validatedog": "Por favor, preencha todos os campos.",
+  "responsedog": "Idade do Cachorro - Anos"
+}

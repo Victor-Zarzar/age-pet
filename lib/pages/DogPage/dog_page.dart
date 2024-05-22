@@ -1,5 +1,6 @@
 import 'package:age_pet/components/AppAssets/app_assets.dart';
 import 'package:age_pet/components/AppTheme/app_theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,7 +35,7 @@ class _DogPageState extends State<DogPage> {
                ImageThree.asset(),
                 const SizedBox(height: 20),
                 Text(
-                  'Idade do Cachorro',
+                  'textdog'.tr(),
                   style: GoogleFonts.jetBrainsMono(
                     textStyle: TextStyle(
                       fontSize: 15,
@@ -47,18 +48,18 @@ class _DogPageState extends State<DogPage> {
                 TextFormField(
                   controller: humanAgeController,
                   keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Idade Humana',
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: 'labeldog'.tr(),
+                    border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
                   controller: weightController,
                   keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Peso (kg)',
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(
+                    labelText: 'secondlabeldog'.tr(),
+                    border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -69,7 +70,7 @@ class _DogPageState extends State<DogPage> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            'Por favor, preencha todos os campos.',
+                            'validatedog'.tr(),
                             style: GoogleFonts.jetBrainsMono(
                               textStyle: TextStyle(
                                 fontSize: 14,
@@ -91,7 +92,7 @@ class _DogPageState extends State<DogPage> {
                   color: ButtonColor.primaryColor,
                   shape: GFButtonShape.pills,
                   fullWidthButton: true,
-                  text: "Calcular",
+                  text: "buttondog".tr(),
                   textStyle: TextStyle(
                     color: FontTextColor.secondaryColor,
                     fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
@@ -101,7 +102,7 @@ class _DogPageState extends State<DogPage> {
                 ),
                 if (canineAge != null)
                   Text(
-                    'Idade do Cachorro: $canineAge anos',
+                   '${'responsedog'.tr()}: $canineAge',
                     style: GoogleFonts.jetBrainsMono(
                       textStyle: TextStyle(
                         fontSize: 15,
