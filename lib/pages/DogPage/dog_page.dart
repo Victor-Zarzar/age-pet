@@ -49,14 +49,23 @@ class _DogPageState extends State<DogPage> {
                   height: 50,
                   width: 180,
                   child: TextFormField(
+                    cursorColor: FormColor.primaryColor,
                     controller: humanAgeController,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       labelText: 'labeldog'.tr(),
-                      labelStyle: const TextStyle(
+                      labelStyle: TextStyle(
                         fontSize: 12,
+                        color: FormColor.primaryColor,
                       ),
                       border: const OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FormColor.primaryColor,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                     ),
                   ),
                 ),
@@ -65,14 +74,23 @@ class _DogPageState extends State<DogPage> {
                   height: 50,
                   width: 180,
                   child: TextFormField(
+                    cursorColor: FormColor.primaryColor,
                     controller: weightController,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       labelText: 'secondlabeldog'.tr(),
-                      labelStyle: const TextStyle(
+                      labelStyle: TextStyle(
                         fontSize: 12,
+                        color: FormColor.primaryColor,
                       ),
                       border: const OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FormColor.primaryColor,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                     ),
                   ),
                 ),

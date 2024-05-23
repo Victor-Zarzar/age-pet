@@ -49,14 +49,23 @@ class _CatPageState extends State<CatPage> {
                   height: 50,
                   width: 180,
                   child: TextFormField(
+                    cursorColor: FormColor.primaryColor,
                     controller: humanAgeController,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       labelText: 'labelcat'.tr(),
-                      labelStyle: const TextStyle(
+                      labelStyle: TextStyle(
                         fontSize: 12,
+                        color: FormColor.primaryColor,
                       ),
                       border: const OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FormColor.primaryColor,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                     ),
                   ),
                 ),
@@ -65,13 +74,22 @@ class _CatPageState extends State<CatPage> {
                   height: 50,
                   width: 180,
                   child: TextFormField(
+                    cursorColor: FormColor.primaryColor,
                     controller: weightController,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FormColor.primaryColor,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                       labelText: 'secondlabelcat'.tr(),
-                      labelStyle: const TextStyle(
+                      labelStyle: TextStyle(
                         fontSize: 12,
+                        color: FormColor.primaryColor,
                       ),
                     ),
                   ),

@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppTheme {
   AppTheme._();
 
@@ -24,6 +26,12 @@ class ButtonColor {
 
   static Color get secondaryColor => const Color(0xFF607D8B);
   
+}
+
+class FormColor {
+  FormColor._();
+
+  static Color get primaryColor => const Color(0xFF000000);
 }
 
 class TabBarColor {
