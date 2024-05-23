@@ -44,6 +44,14 @@ class IconColor {
   static Color get primaryColor => const Color(0xFF000000);
 }
 
+class SnackBarColor {
+  SnackBarColor._();
+
+  static Color get primaryColor => const Color(0xFF212121);
+
+  static Color get secondColor => const Color(0xFF616161);
+}
+
 class TabBarColor {
   TabBarColor._();
 

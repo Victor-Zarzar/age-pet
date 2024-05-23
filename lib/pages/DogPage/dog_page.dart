@@ -114,6 +114,7 @@ class _DogPageState extends State<DogPage> {
                               weightController.text.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
+                                backgroundColor: notifier.isDark ? SnackBarColor.secondColor : SnackBarColor.primaryColor,
                                 content: Text(
                                   'validatedog'.tr(),
                                   style: GoogleFonts.jetBrainsMono(
@@ -156,7 +157,9 @@ class _DogPageState extends State<DogPage> {
                             textStyle: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
-                              color: FontTextColor.primaryColor,
+                              color: notifier.isDark
+                              ? FontTextColor.secondaryColor
+                              : FontTextColor.primaryColor,
                             ),
                           ),
                         ),

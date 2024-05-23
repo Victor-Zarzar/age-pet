@@ -114,6 +114,7 @@ class _CatPageState extends State<CatPage> {
                               weightController.text.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
+                                backgroundColor: notifier.isDark ? SnackBarColor.secondColor : SnackBarColor.primaryColor,
                                 content: Text(
                                   'validatecat'.tr(),
                                   style: GoogleFonts.jetBrainsMono(
@@ -156,7 +157,9 @@ class _CatPageState extends State<CatPage> {
                             textStyle: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
-                              color: FontTextColor.primaryColor,
+                              color: notifier.isDark
+                              ? FontTextColor.secondaryColor
+                              : FontTextColor.primaryColor,
                             ),
                           ),
                         ),
