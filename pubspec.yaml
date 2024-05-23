@@ -39,6 +39,8 @@ dependencies:
   getwidget: ^4.0.0
   easy_localization: ^3.0.7
   flutter_local_notifications: ^17.1.2
+  provider: ^6.1.2
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:

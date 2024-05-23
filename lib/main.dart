@@ -1,24 +1,26 @@
+import 'package:age_pet/components/DartkTheme/provider_app.dart';
 import 'package:age_pet/components/LocalNotifications/local_notifications.dart';
 import 'package:age_pet/pages/IntroPage/intro_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await LocaleNotifications.init();
-    runApp(
-      EasyLocalization(
-        supportedLocales: const [
-          Locale('en', 'US'),
-          Locale('pt', 'BR'),
-        ],
-        path: 'assets/translations',
-        fallbackLocale: const Locale('en-US'),
-        child: const MyApp(),
-      ),
-    );
-  }
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('pt', 'BR'),
+      ],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en-US'),
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -26,15 +28,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: false,
+    return ChangeNotifierProvider(
+      create: (BuildContext context) => UiProvider()..init(),
+      child: Consumer<UiProvider>(
+        builder: (context, UiProvider notifier, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              useMaterial3: true,
+            ),
+            localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
+            locale: context.locale,
+            home: const IntroPage(),
+            themeMode: notifier.isDark ? ThemeMode.dark : ThemeMode.light,
+            darkTheme:
+                notifier.isDark ? notifier.darkTheme : notifier.lightTheme,
+          );
+        },
       ),
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      home: const IntroPage(),
     );
   }
 }

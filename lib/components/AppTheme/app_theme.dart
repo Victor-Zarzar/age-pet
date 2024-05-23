@@ -9,6 +9,8 @@ class AppTheme {
 
   static Color get secondaryColor => const Color(0x00000000);
 
+  static Color get thirdColor => const Color(0xFF212121);
+
 }
 
 class FontTextColor {
