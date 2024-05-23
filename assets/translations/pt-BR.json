@@ -17,5 +17,6 @@
   "validatedog": "Por favor, preencha todos os campos.",
   "responsedog": "Idade - Anos",
   "about": "Sobre",
+  "abouttext": "Este aplicativo foi desenvolvido para calcular a idade do seu pet de forma rápida e fácil.",
   "darkmode": "Modo Escuro"
 }

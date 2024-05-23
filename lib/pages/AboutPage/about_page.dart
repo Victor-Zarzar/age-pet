@@ -14,26 +14,62 @@ class AboutPage extends StatefulWidget {
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
+    double myHeight = MediaQuery.of(context).size.height;
+    double myWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppTheme.primaryColor,
-      body: GFAppBar(
-        centerTitle: true,
-        backgroundColor: AppTheme.primaryColor,
-        title: Text(
-          "about".tr(),
-          style: GoogleFonts.jetBrainsMono(
-            textStyle: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-              color: FontTextColor.primaryColor,
+      body: SizedBox(
+        height: myHeight,
+        width: myWidth,
+        child: Column(
+          children: [
+            SizedBox(
+              width: myWidth,
+              child: GFAppBar(
+                centerTitle: true,
+                backgroundColor: AppTheme.primaryColor,
+                title: Text(
+                  "about".tr(),
+                  style: GoogleFonts.jetBrainsMono(
+                    textStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: FontTextColor.primaryColor,
+                    ),
+                  ),
+                ),
+                leading: IconButton(
+                  icon: Icon(Icons.arrow_back, color: IconColor.primaryColor),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ),
             ),
-          ),
-        ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: IconColor.primaryColor),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  children: [
+                    const Icon(Icons.info, color: Colors.blue),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        "abouttext".tr(),
+                        style: GoogleFonts.jetBrainsMono(
+                          textStyle: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: FontTextColor.primaryColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

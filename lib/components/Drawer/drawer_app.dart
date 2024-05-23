@@ -3,6 +3,7 @@ import 'package:age_pet/pages/AboutPage/about_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DrawerComponent extends StatefulWidget {
   const DrawerComponent({super.key});
@@ -37,7 +38,7 @@ class _DrawerComponentState extends State<DrawerComponent> {
                       },
                     ),
                     GFAvatar(
-                      radius: 80.0,
+                      radius: 100.0,
                       backgroundColor: AppTheme.primaryColor,
                       backgroundImage: const AssetImage(
                         "assets/pets.png",
@@ -47,16 +48,26 @@ class _DrawerComponentState extends State<DrawerComponent> {
                 ),
               ),
               ListTile(
-                title: Text(
-                  'darkmode'.tr(),
-                  style: TextStyle(color: FontTextColor.primaryColor),
-                ),
+                title: Text('darkmode'.tr(),
+                    style: GoogleFonts.jetBrainsMono(
+                      textStyle: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: FontTextColor.primaryColor,
+                      ),
+                    )),
                 onTap: () {},
               ),
               ListTile(
                 title: Text(
                   'about'.tr(),
-                  style: TextStyle(color: FontTextColor.primaryColor),
+                  style: GoogleFonts.jetBrainsMono(
+                    textStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: FontTextColor.primaryColor,
+                    ),
+                  ),
                 ),
                 onTap: () {
                   Navigator.push(
