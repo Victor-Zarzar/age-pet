@@ -8,7 +8,7 @@
 - Flutter
 - Get Widget UI
 - Google Fonts
-- Locale Language
+- Locale Language EN / PT-BR
 
 <br />
 

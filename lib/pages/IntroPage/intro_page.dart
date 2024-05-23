@@ -31,7 +31,7 @@ class _IntroPageState extends State<IntroPage> {
               "intro_title".tr(),
               style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(
-                  fontSize: 12,
+                  fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: FontTextColor.primaryColor,
                 ),
