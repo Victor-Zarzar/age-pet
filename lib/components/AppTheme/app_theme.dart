@@ -7,6 +7,8 @@ class AppTheme {
 
   static Color get primaryColor => const Color(0xFFCFD8DC);
 
+  static Color get secondaryColor => const Color(0x00000000);
+
 }
 
 class FontTextColor {
@@ -30,6 +32,12 @@ class ButtonColor {
 
 class FormColor {
   FormColor._();
+
+  static Color get primaryColor => const Color(0xFF000000);
+}
+
+class IconColor {
+  IconColor._();
 
   static Color get primaryColor => const Color(0xFF000000);
 }

@@ -15,5 +15,7 @@
   "secondlabeldog": "Peso (kg)",
   "buttondog": "Calcular",
   "validatedog": "Por favor, preencha todos os campos.",
-  "responsedog": "Idade - Anos"
+  "responsedog": "Idade - Anos",
+  "about": "Sobre",
+  "darkmode": "Modo Escuro"
 }

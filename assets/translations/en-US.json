@@ -15,5 +15,7 @@
   "secondlabeldog": "Weight (lb)",
   "buttondog": "Calculate",
   "validatedog": "Please fill in all fields.",
-  "responsedog": "Age - Years"
+  "responsedog": "Age - Years",
+  "about": "About",
+  "darkmode": "Dark Mode"
 }

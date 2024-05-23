@@ -1,4 +1,5 @@
 import 'package:age_pet/components/AppTheme/app_theme.dart';
+import 'package:age_pet/components/Drawer/drawer_app.dart';
 import 'package:age_pet/pages/CatPage/cat_page.dart';
 import 'package:age_pet/pages/DogPage/dog_page.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -28,7 +29,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
     double myWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: GFAppBar(
-        automaticallyImplyLeading: false,
+        automaticallyImplyLeading: true,
         centerTitle: true,
         backgroundColor: AppTheme.primaryColor,
         title: Text(
@@ -42,6 +43,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
           ),
         ),
       ),
+      drawer: const DrawerComponent(),
       body: SizedBox(
         height: myHeight,
         width: myWidth,
