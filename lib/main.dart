@@ -1,25 +1,12 @@
+import 'package:age_pet/components/LocalNotifications/local_notifications.dart';
 import 'package:age_pet/pages/IntroPage/intro_page.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  await AwesomeNotifications().initialize(null, [
-    NotificationChannel(
-        channelGroupKey: "basic_channel_group",
-        channelKey: "basic_channel",
-        channelName: "Basic notification",
-        channelDescription: "Test Notifications channel")
-  ], channelGroups: [
-    NotificationChannelGroup(
-        channelGroupKey: "basic_channel_group", channelGroupName: "Basic Group")
-  ]);
-  bool isAllowedToSendNotification =
-      await AwesomeNotifications().isNotificationAllowed();
-  if (!isAllowedToSendNotification) {
-    AwesomeNotifications().requestPermissionToSendNotifications();
+  await LocaleNotifications.init();
     runApp(
       EasyLocalization(
         supportedLocales: const [
@@ -32,7 +19,6 @@ void main() async {
       ),
     );
   }
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
