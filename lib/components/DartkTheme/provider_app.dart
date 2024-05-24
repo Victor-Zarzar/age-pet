@@ -7,14 +7,12 @@ class UiProvider extends ChangeNotifier {
 
   late SharedPreferences storage;
 
-  //Custom dark theme
   final darkTheme = ThemeData(
     primaryColor: Colors.black12,
     brightness: Brightness.dark,
     primaryColorDark: Colors.black12,
   );
 
-  //Custom light theme
   final lightTheme = ThemeData(
       primaryColor: Colors.white,
       brightness: Brightness.light,

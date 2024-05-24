@@ -49,19 +49,21 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            leading: Builder(
-              builder: (context) => IconButton(
-                icon: Icon(
-                  Icons.menu,
-                  color: notifier.isDark
-                      ? IconColor.thirdColor
-                      : IconColor.primaryColor,
+            actions: [
+              Builder(
+                builder: (context) => IconButton(
+                  icon: Icon(
+                    Icons.settings,
+                    color: notifier.isDark
+                        ? IconColor.thirdColor
+                        : IconColor.primaryColor,
+                  ),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
                 ),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
               ),
-            ),
+            ],
           ),
           drawer: const DrawerComponent(),
           body: SizedBox(
