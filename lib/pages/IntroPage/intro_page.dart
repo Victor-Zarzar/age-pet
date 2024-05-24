@@ -58,11 +58,13 @@ class _IntroPageState extends State<IntroPage> {
                       },
                       text: "intro_button".tr(),
                       textStyle: TextStyle(
-                        color: FontTextColor.secondaryColor,
+                        color: notifier.isDark ? FontTextColor.primaryColor : FontTextColor.secondaryColor,
                         fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
                         fontSize: 11,
                       ),
-                      color: ButtonColor.primaryColor,
+                      color: notifier.isDark
+                            ? ButtonColor.secondaryColor
+                            : ButtonColor.primaryColor, 
                       shape: GFButtonShape.pills,
                     ),
                   ),

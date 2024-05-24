@@ -33,9 +33,10 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
       builder: (context, notifier, child) {
         return Scaffold(
           appBar: GFAppBar(
-            automaticallyImplyLeading: true,
+            automaticallyImplyLeading: false,
             centerTitle: true,
-            backgroundColor: notifier.isDark ? AppTheme.thirdColor : AppTheme.primaryColor,
+            backgroundColor:
+                notifier.isDark ? AppTheme.thirdColor : AppTheme.primaryColor,
             title: Text(
               'text_appbar'.tr(),
               style: GoogleFonts.jetBrainsMono(
@@ -43,9 +44,22 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: notifier.isDark
-                ? FontTextColor.secondaryColor
-                : FontTextColor.primaryColor,
+                      ? FontTextColor.secondaryColor
+                      : FontTextColor.primaryColor,
                 ),
+              ),
+            ),
+            leading: Builder(
+              builder: (context) => IconButton(
+                icon: Icon(
+                  Icons.menu,
+                  color: notifier.isDark
+                      ? IconColor.thirdColor
+                      : IconColor.primaryColor,
+                ),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
               ),
             ),
           ),

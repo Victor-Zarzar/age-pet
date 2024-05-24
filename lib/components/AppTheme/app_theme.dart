@@ -34,7 +34,7 @@ class ButtonColor {
 
   static Color get primaryColor => const Color(0xFF000000);
 
-  static Color get secondaryColor => const Color(0xFF607D8B);
+  static Color get secondaryColor => const Color(0xFFCFD8DC);
   
 }
 
@@ -42,6 +42,8 @@ class FormColor {
   FormColor._();
 
   static Color get primaryColor => const Color(0xFF000000);
+
+  static Color get secondaryColor => const Color(0XFFBDBDBD);
 }
 
 class IconColor {
@@ -50,6 +52,8 @@ class IconColor {
   static Color get primaryColor => const Color(0xFF000000);
 
   static Color get secondaryColor => const Color(0xFF2196F3);
+
+  static Color get thirdColor => const Color(0xFFCFD8DC);
 }
 
 class SnackBarColor {

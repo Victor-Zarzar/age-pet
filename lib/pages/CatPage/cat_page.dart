@@ -26,7 +26,8 @@ class _CatPageState extends State<CatPage> {
     return Consumer<UiProvider>(
       builder: (context, notifier, child) {
         return Scaffold(
-          backgroundColor: notifier.isDark ? AppTheme.thirdColor : AppTheme.primaryColor,
+          backgroundColor:
+              notifier.isDark ? AppTheme.thirdColor : AppTheme.primaryColor,
           body: SizedBox(
             height: myHeight,
             width: myWidth,
@@ -55,7 +56,9 @@ class _CatPageState extends State<CatPage> {
                       height: 50,
                       width: 180,
                       child: TextFormField(
-                        cursorColor: FormColor.primaryColor,
+                        cursorColor: notifier.isDark
+                            ? FormColor.secondaryColor
+                            : FormColor.primaryColor,
                         controller: humanAgeController,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
@@ -63,13 +66,15 @@ class _CatPageState extends State<CatPage> {
                           labelStyle: TextStyle(
                             fontSize: 12,
                             color: notifier.isDark
-                              ? FontTextColor.secondaryColor
-                              : FontTextColor.primaryColor,
+                                ? FontTextColor.secondaryColor
+                                : FontTextColor.primaryColor,
                           ),
                           border: const OutlineInputBorder(),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: FormColor.primaryColor,
+                              color: notifier.isDark
+                                  ? FormColor.secondaryColor
+                                  : FormColor.primaryColor,
                               width: 2,
                             ),
                             borderRadius: BorderRadius.circular(5),
@@ -82,14 +87,18 @@ class _CatPageState extends State<CatPage> {
                       height: 50,
                       width: 180,
                       child: TextFormField(
-                        cursorColor: FormColor.primaryColor,
+                        cursorColor: notifier.isDark
+                            ? FormColor.secondaryColor
+                            : FormColor.primaryColor,
                         controller: weightController,
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           border: const OutlineInputBorder(),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: FormColor.primaryColor,
+                              color: notifier.isDark
+                                  ? FormColor.secondaryColor
+                                  : FormColor.primaryColor,
                               width: 2,
                             ),
                             borderRadius: BorderRadius.circular(5),
@@ -98,8 +107,8 @@ class _CatPageState extends State<CatPage> {
                           labelStyle: TextStyle(
                             fontSize: 12,
                             color: notifier.isDark
-                              ? FontTextColor.secondaryColor
-                              : FontTextColor.primaryColor,
+                                ? FontTextColor.secondaryColor
+                                : FontTextColor.primaryColor,
                           ),
                         ),
                       ),
@@ -114,7 +123,9 @@ class _CatPageState extends State<CatPage> {
                               weightController.text.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                backgroundColor: notifier.isDark ? SnackBarColor.secondColor : SnackBarColor.primaryColor,
+                                backgroundColor: notifier.isDark
+                                    ? SnackBarColor.secondColor
+                                    : SnackBarColor.primaryColor,
                                 content: Text(
                                   'validatecat'.tr(),
                                   style: GoogleFonts.jetBrainsMono(
@@ -136,12 +147,16 @@ class _CatPageState extends State<CatPage> {
                                 calculateFelineAge(humanAge, weight).round();
                           });
                         },
-                        color: ButtonColor.primaryColor,
+                        color: notifier.isDark
+                            ? ButtonColor.secondaryColor
+                            : ButtonColor.primaryColor,
                         shape: GFButtonShape.pills,
                         fullWidthButton: true,
                         text: "buttoncat".tr(),
                         textStyle: TextStyle(
-                          color: FontTextColor.secondaryColor,
+                          color: notifier.isDark
+                              ? FontTextColor.primaryColor
+                              : FontTextColor.secondaryColor,
                           fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
                           fontSize: 11,
                         ),
@@ -158,8 +173,8 @@ class _CatPageState extends State<CatPage> {
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
                               color: notifier.isDark
-                              ? FontTextColor.secondaryColor
-                              : FontTextColor.primaryColor,
+                                  ? FontTextColor.secondaryColor
+                                  : FontTextColor.primaryColor,
                             ),
                           ),
                         ),
