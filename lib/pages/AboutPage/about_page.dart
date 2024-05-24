@@ -65,7 +65,7 @@ class _AboutPageState extends State<AboutPage> {
                     padding: const EdgeInsets.all(20.0),
                     child: Row(
                       children: [
-                        const Icon(Icons.info, color: Colors.blue),
+                        Icon(Icons.info, color: IconColor.secondaryColor),
                         const SizedBox(width: 10),
                         Expanded(
                           child: Text(

@@ -13,6 +13,12 @@ class AppTheme {
 
 }
 
+class ColorSchemeTheme {
+  ColorSchemeTheme._();
+
+  static Color get primaryColor => const Color(0xFF673AB7);
+}
+
 class FontTextColor {
   FontTextColor._();
 
@@ -42,6 +48,8 @@ class IconColor {
   IconColor._();
 
   static Color get primaryColor => const Color(0xFF000000);
+
+  static Color get secondaryColor => const Color(0xFF2196F3);
 }
 
 class SnackBarColor {

@@ -1,3 +1,4 @@
+import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
 import 'package:age_pet/components/LocalNotifications/local_notifications.dart';
 import 'package:age_pet/pages/IntroPage/intro_page.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              colorScheme: ColorScheme.fromSeed(seedColor: ColorSchemeTheme.primaryColor),
               useMaterial3: true,
             ),
             localizationsDelegates: context.localizationDelegates,
