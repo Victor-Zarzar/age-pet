@@ -31,41 +31,38 @@ class _CuriositiesPageState extends State<CuriositiesPage> {
                 children: AccordionData.accordionItems.map((item) {
                   return Padding(
                     padding: const EdgeInsets.only(top: 6),
-                    child: SizedBox(
-                      width: 300,
-                      child: GFAccordion(
-                        collapsedTitleBackgroundColor: notifier.isDark
-                            ? ButtonColor.secondaryColor
-                            : ButtonColor.primaryColor,
-                        contentBackgroundColor: notifier.isDark
-                            ? ButtonColor.primaryColor
-                            : ButtonColor.secondaryColor,
-                        expandedTitleBackgroundColor: notifier.isDark
-                            ? ButtonColor.secondaryColor
-                            : ButtonColor.primaryColor,
-                        collapsedIcon: Icon(
-                          Icons.keyboard_double_arrow_down,
-                          color: notifier.isDark
-                              ? IconColor.primaryColor
-                              : IconColor.thirdColor,
-                        ),
-                        expandedIcon: Icon(
-                          Icons.keyboard_double_arrow_up,
-                          color: notifier.isDark
-                              ? IconColor.primaryColor
-                              : IconColor.thirdColor,
-                        ),
-                        titleBorderRadius: BorderRadius.circular(10),
-                        contentBorderRadius: BorderRadius.circular(6),
-                        title: item['title'],
-                        content: item['content'],
-                        textStyle: GoogleFonts.jetBrainsMono(
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: notifier.isDark
-                              ? FontTextColor.primaryColor
-                              : FontTextColor.secondaryColor,
-                        ),
+                    child: GFAccordion(
+                      collapsedTitleBackgroundColor: notifier.isDark
+                          ? ButtonColor.secondaryColor
+                          : ButtonColor.primaryColor,
+                      contentBackgroundColor: notifier.isDark
+                          ? ButtonColor.primaryColor
+                          : ButtonColor.secondaryColor,
+                      expandedTitleBackgroundColor: notifier.isDark
+                          ? ButtonColor.secondaryColor
+                          : ButtonColor.primaryColor,
+                      collapsedIcon: Icon(
+                        Icons.keyboard_double_arrow_down,
+                        color: notifier.isDark
+                            ? IconColor.primaryColor
+                            : IconColor.thirdColor,
+                      ),
+                      expandedIcon: Icon(
+                        Icons.keyboard_double_arrow_up,
+                        color: notifier.isDark
+                            ? IconColor.primaryColor
+                            : IconColor.thirdColor,
+                      ),
+                      titleBorderRadius: BorderRadius.circular(15),
+                      contentBorderRadius: BorderRadius.circular(15),
+                      title: item['title'],
+                      content: item['content'],
+                      textStyle: GoogleFonts.jetBrainsMono(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: notifier.isDark
+                            ? FontTextColor.primaryColor
+                            : FontTextColor.secondaryColor,
                       ),
                     ),
                   );
