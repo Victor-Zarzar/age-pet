@@ -60,6 +60,8 @@ class _DrawerComponentState extends State<DrawerComponent> {
                   ),
                   ListTile(
                     trailing: Switch(
+                      activeColor: SwitchColor.primaryColor,
+                      inactiveTrackColor: SwitchColor.secondaryColor,
                       value: notifier.isDark,
                       onChanged: (value) => notifier.changeTheme(),
                     ),
