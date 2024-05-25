@@ -53,8 +53,6 @@ class _CuriositiesPageState extends State<CuriositiesPage> {
                             ? IconColor.primaryColor
                             : IconColor.thirdColor,
                       ),
-                      titleBorderRadius: BorderRadius.circular(15),
-                      contentBorderRadius: BorderRadius.circular(15),
                       title: item['title'],
                       content: item['content'],
                       textStyle: GoogleFonts.jetBrainsMono(

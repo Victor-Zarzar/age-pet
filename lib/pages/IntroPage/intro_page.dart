@@ -23,7 +23,8 @@ class _IntroPageState extends State<IntroPage> {
     return Consumer<UiProvider>(
       builder: (context, notifier, child) {
         return Scaffold(
-          backgroundColor: notifier.isDark ? AppTheme.thirdColor : AppTheme.primaryColor,
+          backgroundColor:
+              notifier.isDark ? AppTheme.thirdColor : AppTheme.primaryColor,
           body: SizedBox(
             height: myHeight,
             width: myWidth,
@@ -38,8 +39,8 @@ class _IntroPageState extends State<IntroPage> {
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: notifier.isDark
-                              ? FontTextColor.secondaryColor
-                              : FontTextColor.primaryColor,
+                          ? FontTextColor.secondaryColor
+                          : FontTextColor.primaryColor,
                     ),
                   ),
                 ),
@@ -53,19 +54,21 @@ class _IntroPageState extends State<IntroPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const AppPage()),
+                            builder: (context) => const AppPage(),
+                          ),
                         );
                       },
                       text: "intro_button".tr(),
                       textStyle: TextStyle(
-                        color: notifier.isDark ? FontTextColor.primaryColor : FontTextColor.secondaryColor,
+                        color: notifier.isDark
+                            ? FontTextColor.primaryColor
+                            : FontTextColor.secondaryColor,
                         fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
                         fontSize: 11,
                       ),
                       color: notifier.isDark
-                            ? ButtonColor.secondaryColor
-                            : ButtonColor.primaryColor, 
-                      shape: GFButtonShape.pills,
+                          ? ButtonColor.secondaryColor
+                          : ButtonColor.primaryColor,
                     ),
                   ),
                 ),

@@ -150,7 +150,6 @@ class _DogPageState extends State<DogPage> {
                         color: notifier.isDark
                             ? ButtonColor.secondaryColor
                             : ButtonColor.primaryColor,
-                        shape: GFButtonShape.pills,
                         fullWidthButton: true,
                         text: "buttondog".tr(),
                         textStyle: TextStyle(

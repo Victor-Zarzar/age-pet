@@ -3,7 +3,6 @@ import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -151,7 +150,6 @@ class _CatPageState extends State<CatPage> {
                         color: notifier.isDark
                             ? ButtonColor.secondaryColor
                             : ButtonColor.primaryColor,
-                        shape: GFButtonShape.pills,
                         fullWidthButton: true,
                         text: "buttoncat".tr(),
                         textStyle: TextStyle(
