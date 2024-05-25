@@ -2,10 +2,10 @@ import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
 import 'package:age_pet/components/Drawer/drawer_app.dart';
 import 'package:age_pet/pages/CatPage/cat_page.dart';
-import 'package:age_pet/pages/Curiosities/curiosities_app.dart';
+import 'package:age_pet/pages/CuriositiesPage/curiosities_app.dart';
 import 'package:age_pet/pages/DogPage/dog_page.dart';
 import 'package:easy_localization/easy_localization.dart';
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -92,13 +92,13 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                 ? FontTextColor.secondaryColor
                 : FontTextColor.primaryColor,
             labelStyle: GoogleFonts.jetBrainsMono(
-              textStyle: const TextStyle(fontSize: 11),
+              textStyle: const TextStyle(fontSize: 8),
             ),
             tabs: [
               Tab(
                 icon: const Icon(
                   Icons.pets,
-                  size: 20,
+                  size: 16,
                 ),
                 child: Text(
                   'cat'.tr(),
@@ -107,7 +107,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
               Tab(
                 icon: const Icon(
                   Icons.pets,
-                  size: 20,
+                  size: 16,
                 ),
                 child: Text(
                   'dog'.tr(),
@@ -116,7 +116,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
               Tab(
                 icon: const Icon(
                   Icons.question_answer,
-                  size: 20,
+                  size: 16,
                 ),
                 child: Text(
                   'curiosities'.tr(),
