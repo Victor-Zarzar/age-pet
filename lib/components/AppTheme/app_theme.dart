@@ -32,7 +32,7 @@ class FontTextColor {
 class ButtonColor {
   ButtonColor._();
 
-  static Color get primaryColor => const Color(0xFF000000);
+  static Color get primaryColor => const Color(0xFF757575);
 
   static Color get secondaryColor => const Color(0xFFCFD8DC);
   
