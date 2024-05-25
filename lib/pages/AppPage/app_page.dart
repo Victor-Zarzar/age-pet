@@ -2,6 +2,7 @@ import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
 import 'package:age_pet/components/Drawer/drawer_app.dart';
 import 'package:age_pet/pages/CatPage/cat_page.dart';
+import 'package:age_pet/pages/Curiosities/curiosities_app.dart';
 import 'package:age_pet/pages/DogPage/dog_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import "package:flutter/material.dart";
@@ -22,7 +23,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 2, vsync: this);
+    tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -74,11 +75,12 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
               children: const <Widget>[
                 CatPage(),
                 DogPage(),
+                CuriositiesPage(),
               ],
             ),
           ),
           bottomNavigationBar: GFTabBar(
-            length: 2,
+            length: 3,
             tabBarHeight: 60,
             controller: tabController,
             tabBarColor:
@@ -109,6 +111,15 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                 ),
                 child: Text(
                   'dog'.tr(),
+                ),
+              ),
+              Tab(
+                icon: const Icon(
+                  Icons.question_answer,
+                  size: 20,
+                ),
+                child: Text(
+                  'curiosities'.tr(),
                 ),
               ),
             ],
