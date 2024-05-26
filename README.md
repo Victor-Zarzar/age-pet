@@ -10,6 +10,7 @@
 - Google Fonts
 - Locale Language EN / PT-BR
 - Dark Mode Provider
+- Local Notifications
 
 <br />
 
