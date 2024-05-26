@@ -1,5 +1,6 @@
 import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
+import 'package:age_pet/components/NotificationController/notification_controller.dart';
 import 'package:age_pet/pages/IntroPage/intro_page.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -15,7 +16,7 @@ void main() async {
       channelKey: "basic_channel",
       channelName: "Basic Notifications",
       channelDescription: "Basic notifications channel",
-    )
+    ),
   ], channelGroups: [
     NotificationChannelGroup(
       channelGroupKey: "basic_channel_group",
@@ -40,10 +41,27 @@ void main() async {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    AwesomeNotifications().setListeners(
+        onActionReceivedMethod: NotificationController.onActionReceivedMethod,
+        onNotificationCreatedMethod:
+            NotificationController().onNotificationCreatedMethod,
+        onNotificationDisplayedMethod:
+            NotificationController().onNotificationDisplayedMethod,
+        onDismissActionReceivedMethod:
+            NotificationController().onDismissActionReceivedMethod);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -54,7 +72,8 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(
-                  seedColor: ColorSchemeTheme.primaryColor),
+                seedColor: ColorSchemeTheme.primaryColor,
+              ),
               useMaterial3: true,
             ),
             localizationsDelegates: context.localizationDelegates,

@@ -2,7 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 
 class AccordionData {
   static List<Map<String, String>> accordionItems = [
-    {'title': 'title1'.tr(), 'content': 'content1'.tr()},
+    {
+      'title': 'title1'.tr(),
+      'content': 'content1'.tr(),
+    },
     {
       'title': 'title2'.tr(),
       'content': 'content2'.tr(),

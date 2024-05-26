@@ -1,5 +1,5 @@
 <h1 align="center" id="header">
- Idade do Pet App Flutter
+ Age Pet App Flutter
 </h1>
 
 🤖 Stack:
@@ -33,14 +33,13 @@ For install dependencies:
     flutter pub get
 
 Run the app:
-   
-    flutter run
 
+    flutter run
 
 ### Version iOS:
 
 <img src="assets/intropageios.png" alt="intro page ios" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageios.png" alt="home page ios" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/homepageios2.png" alt="home page ios 2" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/darkmodeios.png" alt="home page ios 2" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/aboutios.png" alt="home page ios 2" width="250">
-&nbsp; &nbsp; &nbsp; <img src="assets/catios.png" alt="home page ios 2" width="250"> 
+&nbsp; &nbsp; &nbsp; <img src="assets/catios.png" alt="home page ios 2" width="250">
 
 ### Version Android:
 
