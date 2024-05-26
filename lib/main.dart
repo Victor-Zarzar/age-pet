@@ -1,7 +1,7 @@
 import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
-import 'package:age_pet/components/LocalNotifications/local_notifications.dart';
 import 'package:age_pet/pages/IntroPage/intro_page.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -9,7 +9,24 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  await LocaleNotifications.init();
+  await AwesomeNotifications().initialize(null, [
+    NotificationChannel(
+      channelGroupKey: "basic_channel_group",
+      channelKey: "basic_channel",
+      channelName: "Basic Notifications",
+      channelDescription: "Basic notifications channel",
+    )
+  ], channelGroups: [
+    NotificationChannelGroup(
+      channelGroupKey: "basic_channel_group",
+      channelGroupName: "Basic Group",
+    ),
+  ]);
+  bool isAllowedToSendNotification =
+      await AwesomeNotifications().isNotificationAllowed();
+  if (!isAllowedToSendNotification) {
+    AwesomeNotifications().requestPermissionToSendNotifications();
+  }
   runApp(
     EasyLocalization(
       supportedLocales: const [
@@ -36,7 +53,8 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              colorScheme: ColorScheme.fromSeed(seedColor: ColorSchemeTheme.primaryColor),
+              colorScheme: ColorScheme.fromSeed(
+                  seedColor: ColorSchemeTheme.primaryColor),
               useMaterial3: true,
             ),
             localizationsDelegates: context.localizationDelegates,
