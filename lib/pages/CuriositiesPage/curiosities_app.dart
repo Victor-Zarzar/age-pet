@@ -28,43 +28,45 @@ class _CuriositiesPageState extends State<CuriositiesPage> {
             width: myWidth,
             child: SingleChildScrollView(
               child: Column(
-                children: AccordionData.accordionItems.map((item) {
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 6),
-                    child: GFAccordion(
-                      collapsedTitleBackgroundColor: notifier.isDark
-                          ? ButtonColor.secondaryColor
-                          : ButtonColor.primaryColor,
-                      contentBackgroundColor: notifier.isDark
-                          ? ButtonColor.primaryColor
-                          : ButtonColor.secondaryColor,
-                      expandedTitleBackgroundColor: notifier.isDark
-                          ? ButtonColor.secondaryColor
-                          : ButtonColor.primaryColor,
-                      collapsedIcon: Icon(
-                        Icons.keyboard_double_arrow_down,
-                        color: notifier.isDark
-                            ? IconColor.primaryColor
-                            : IconColor.thirdColor,
+                children: AccordionData.accordionItems.map(
+                  (item) {
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 6),
+                      child: GFAccordion(
+                        collapsedTitleBackgroundColor: notifier.isDark
+                            ? ButtonColor.secondaryColor
+                            : ButtonColor.primaryColor,
+                        contentBackgroundColor: notifier.isDark
+                            ? ButtonColor.primaryColor
+                            : ButtonColor.secondaryColor,
+                        expandedTitleBackgroundColor: notifier.isDark
+                            ? ButtonColor.secondaryColor
+                            : ButtonColor.primaryColor,
+                        collapsedIcon: Icon(
+                          Icons.keyboard_double_arrow_down,
+                          color: notifier.isDark
+                              ? IconColor.primaryColor
+                              : IconColor.thirdColor,
+                        ),
+                        expandedIcon: Icon(
+                          Icons.keyboard_double_arrow_up,
+                          color: notifier.isDark
+                              ? IconColor.primaryColor
+                              : IconColor.thirdColor,
+                        ),
+                        title: item['title'],
+                        content: item['content'],
+                        textStyle: GoogleFonts.jetBrainsMono(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: notifier.isDark
+                              ? FontTextColor.primaryColor
+                              : FontTextColor.secondaryColor,
+                        ),
                       ),
-                      expandedIcon: Icon(
-                        Icons.keyboard_double_arrow_up,
-                        color: notifier.isDark
-                            ? IconColor.primaryColor
-                            : IconColor.thirdColor,
-                      ),
-                      title: item['title'],
-                      content: item['content'],
-                      textStyle: GoogleFonts.jetBrainsMono(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: notifier.isDark
-                            ? FontTextColor.primaryColor
-                            : FontTextColor.secondaryColor,
-                      ),
-                    ),
-                  );
-                }).toList(),
+                    );
+                  },
+                ).toList(),
               ),
             ),
           ),
