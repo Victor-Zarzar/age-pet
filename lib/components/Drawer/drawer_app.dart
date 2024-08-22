@@ -3,7 +3,6 @@ import 'package:age_pet/components/DartkTheme/provider_app.dart';
 import 'package:age_pet/pages/AboutPage/about_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -46,14 +45,8 @@ class _DrawerComponentState extends State<DrawerComponent> {
                             Navigator.pop(context);
                           },
                         ),
-                        GFAvatar(
-                          radius: 80.0,
-                          backgroundColor: notifier.isDark
-                              ? AppTheme.thirdColor
-                              : AppTheme.primaryColor,
-                          backgroundImage: const AssetImage(
-                            "assets/pets.png",
-                          ),
+                        Image.asset(
+                          'assets/pets.png',
                         ),
                       ],
                     ),
