@@ -1,10 +1,11 @@
 {
   "intro_title": "Calculate your pet's age",
-  "intro_button": "Getting Started",
+  "intro_button": "Get Started",
   "text_appbar": "Pet Calculator",
   "cat": "Cat",
   "dog": "Dog",
   "curiosities": "Curiosities",
+  "settings": "Settings",
   "textcat": "Cat Age",
   "labelcat": "Human Age",
   "secondlabelcat": "Weight (lb)",
