@@ -3,6 +3,7 @@ import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -58,12 +59,15 @@ class _CatPageState extends State<CatPage> {
                         height: 50,
                         width: 180,
                         child: TextFormField(
-                          onTap: () =>
-                              FocusManager.instance.primaryFocus?.unfocus(),
                           cursorColor: notifier.isDark
                               ? FormColor.secondaryColor
                               : FormColor.primaryColor,
                           controller: humanAgeController,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.allow(
+                              RegExp(r'[0-9.,]'),
+                            ),
+                          ],
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             labelText: 'labelcat'.tr(),
@@ -91,12 +95,15 @@ class _CatPageState extends State<CatPage> {
                         height: 50,
                         width: 180,
                         child: TextFormField(
-                          onTap: () =>
-                              FocusManager.instance.primaryFocus?.unfocus(),
                           cursorColor: notifier.isDark
                               ? FormColor.secondaryColor
                               : FormColor.primaryColor,
                           controller: weightController,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.allow(
+                              RegExp(r'[0-9.,]'),
+                            ),
+                          ],
                           keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             border: const OutlineInputBorder(),

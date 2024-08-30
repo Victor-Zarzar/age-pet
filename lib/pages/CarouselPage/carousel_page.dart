@@ -23,6 +23,12 @@ List<String> images = [
   "assets/imgs/image-8.png",
   "assets/imgs/image-9.png",
   "assets/imgs/image-10.png",
+  "assets/imgs/image-11.png",
+  "assets/imgs/image-12.png",
+  "assets/imgs/image-13.png",
+  "assets/imgs/image-14.png",
+  "assets/imgs/image-15.png",
+  "assets/imgs/image-16.png",
 ];
 
 class _CarouselPageState extends State<CarouselPage> {
@@ -69,6 +75,7 @@ class _CarouselPageState extends State<CarouselPage> {
                             (index) => Image.asset(
                               images[index],
                               fit: BoxFit.cover,
+                              semanticLabel: "image_${index + 1}_label".tr(),
                             ),
                           ),
                         ),
