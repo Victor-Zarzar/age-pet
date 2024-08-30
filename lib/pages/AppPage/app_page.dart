@@ -1,5 +1,6 @@
 import 'package:age_pet/components/AppTheme/app_theme.dart';
 import 'package:age_pet/components/DartkTheme/provider_app.dart';
+import 'package:age_pet/pages/CarouselPage/carousel_page.dart';
 import 'package:age_pet/pages/CatPage/cat_page.dart';
 import 'package:age_pet/pages/CuriositiesPage/curiosities_app.dart';
 import 'package:age_pet/pages/DogPage/dog_page.dart';
@@ -23,7 +24,7 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: 4, vsync: this);
+    tabController = TabController(length: 5, vsync: this);
   }
 
   @override
@@ -59,13 +60,14 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
               children: const <Widget>[
                 CatPage(),
                 DogPage(),
+                CarouselPage(),
                 CuriositiesPage(),
                 SettingPage(),
               ],
             ),
           ),
           bottomNavigationBar: GFTabBar(
-            length: 4,
+            length: 5,
             tabBarHeight: 60,
             controller: tabController,
             tabBarColor:
@@ -87,6 +89,9 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                 ),
                 child: Text(
                   'cat'.tr(),
+                  style: GoogleFonts.jetBrainsMono(),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
               ),
               Tab(
@@ -96,6 +101,21 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                 ),
                 child: Text(
                   'dog'.tr(),
+                  style: GoogleFonts.jetBrainsMono(),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                ),
+              ),
+              Tab(
+                icon: const Icon(
+                  Icons.photo,
+                  size: 16,
+                ),
+                child: Text(
+                  'photos'.tr(),
+                  style: GoogleFonts.jetBrainsMono(),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
               ),
               Tab(
@@ -105,6 +125,9 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                 ),
                 child: Text(
                   'curiosities'.tr(),
+                  style: GoogleFonts.jetBrainsMono(),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
               ),
               Tab(
@@ -114,6 +137,9 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
                 ),
                 child: Text(
                   'settings'.tr(),
+                  style: GoogleFonts.jetBrainsMono(),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
               ),
             ],
