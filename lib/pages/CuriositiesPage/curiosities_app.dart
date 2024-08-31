@@ -1,4 +1,5 @@
 import 'package:age_pet/components/AccordionData/accordion_data_app.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,12 +48,14 @@ class _CuriositiesPageState extends State<CuriositiesPage> {
                           color: notifier.isDark
                               ? IconColor.primaryColor
                               : IconColor.thirdColor,
+                          semanticLabel: 'openbutton'.tr(),
                         ),
                         expandedIcon: Icon(
                           Icons.keyboard_double_arrow_up,
                           color: notifier.isDark
                               ? IconColor.primaryColor
                               : IconColor.thirdColor,
+                          semanticLabel: 'closebutton'.tr(),
                         ),
                         title: item['title'],
                         content: item['content'],

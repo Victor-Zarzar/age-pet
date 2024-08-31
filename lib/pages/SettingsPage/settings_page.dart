@@ -35,6 +35,7 @@ class _SettingPageState extends State<SettingPage> {
                     children: [
                       Image.asset(
                         'assets/imgs/pets.png',
+                        semanticLabel: 'image_pet'.tr(),
                       ),
                     ],
                   ),
@@ -46,7 +47,10 @@ class _SettingPageState extends State<SettingPage> {
                     value: notifier.isDark,
                     onChanged: (value) => notifier.changeTheme(),
                   ),
-                  leading: const Icon(Icons.dark_mode),
+                  leading: Icon(
+                    Icons.dark_mode,
+                    semanticLabel: 'darkmode'.tr(),
+                  ),
                   title: Text(
                     'darkmode'.tr(),
                     style: GoogleFonts.jetBrainsMono(
@@ -61,7 +65,10 @@ class _SettingPageState extends State<SettingPage> {
                   ),
                 ),
                 ListTile(
-                  leading: const Icon(Icons.info),
+                  leading: Icon(
+                    Icons.info,
+                    semanticLabel: 'informationicon'.tr(),
+                  ),
                   title: Text(
                     'about'.tr(),
                     style: GoogleFonts.jetBrainsMono(

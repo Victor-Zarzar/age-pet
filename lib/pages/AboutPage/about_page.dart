@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -14,6 +15,15 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
+  Future<void> _launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw '${'launch_error'.tr()} $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double myHeight = MediaQuery.of(context).size.height;
@@ -53,6 +63,7 @@ class _AboutPageState extends State<AboutPage> {
                         color: notifier.isDark
                             ? FontTextColor.secondaryColor
                             : FontTextColor.primaryColor,
+                        semanticLabel: 'backtopage'.tr(),
                       ),
                       onPressed: () {
                         Navigator.pop(context);
@@ -63,25 +74,61 @@ class _AboutPageState extends State<AboutPage> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
-                    child: Row(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.info, color: IconColor.secondaryColor),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: Text(
-                            "abouttext".tr(),
-                            style: GoogleFonts.jetBrainsMono(
-                              textStyle: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.bold,
-                                color: notifier.isDark
-                                    ? FontTextColor.secondaryColor
-                                    : FontTextColor.primaryColor,
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.info,
+                              color: IconColor.secondaryColor,
+                              semanticLabel: 'informationicon'.tr(),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                "abouttext".tr(),
+                                style: GoogleFonts.jetBrainsMono(
+                                  textStyle: TextStyle(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                    color: notifier.isDark
+                                        ? FontTextColor.secondaryColor
+                                        : FontTextColor.primaryColor,
+                                  ),
+                                ),
                               ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Center(
+                    child: GestureDetector(
+                      onTap: () {
+                        _launchURL('https://www.victorzarzar.com.br');
+                      },
+                      child: Flexible(
+                        child: Text(
+                          'developed'.tr(),
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.jetBrainsMono(
+                            textStyle: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: notifier.isDark
+                                  ? FontTextColor.secondaryColor
+                                  : FontTextColor.primaryColor,
+                              decoration: TextDecoration.underline,
                             ),
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
