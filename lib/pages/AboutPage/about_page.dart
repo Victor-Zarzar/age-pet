@@ -113,19 +113,17 @@ class _AboutPageState extends State<AboutPage> {
                       onTap: () {
                         _launchURL('https://www.victorzarzar.com.br');
                       },
-                      child: Flexible(
-                        child: Text(
-                          'developed'.tr(),
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.jetBrainsMono(
-                            textStyle: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                              color: notifier.isDark
-                                  ? FontTextColor.secondaryColor
-                                  : FontTextColor.primaryColor,
-                              decoration: TextDecoration.underline,
-                            ),
+                      child: Text(
+                        'developed'.tr(),
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.jetBrainsMono(
+                          textStyle: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: notifier.isDark
+                                ? FontTextColor.secondaryColor
+                                : FontTextColor.primaryColor,
+                            decoration: TextDecoration.underline,
                           ),
                         ),
                       ),
