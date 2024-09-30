@@ -11,7 +11,8 @@
 - Url Launcher
 - Locale Language EN / PT-BR / ES
 - Dark Mode Provider
-- Local Notifications
+- Flutter Local Notifications
+- Timezone
 
 <br />
 

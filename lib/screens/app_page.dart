@@ -1,10 +1,10 @@
-import 'package:age_pet/components/AppTheme/app_theme.dart';
-import 'package:age_pet/components/DartkTheme/provider_app.dart';
-import 'package:age_pet/pages/CarouselPage/carousel_page.dart';
-import 'package:age_pet/pages/CatPage/cat_page.dart';
-import 'package:age_pet/pages/CuriositiesPage/curiosities_app.dart';
-import 'package:age_pet/pages/DogPage/dog_page.dart';
-import 'package:age_pet/pages/SettingsPage/settings_page.dart';
+import 'package:age_pet/features/app_theme.dart';
+import 'package:age_pet/features/provider_app.dart';
+import 'package:age_pet/screens/carousel_page.dart';
+import 'package:age_pet/screens/cat_page.dart';
+import 'package:age_pet/screens/curiosities_app.dart';
+import 'package:age_pet/screens/dog_page.dart';
+import 'package:age_pet/screens/settings_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
