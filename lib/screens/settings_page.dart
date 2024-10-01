@@ -25,16 +25,17 @@ class _SettingPageState extends State<SettingPage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: AppTheme.secondaryColor,
-              ),
+            SizedBox(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  const Spacer(),
                   Image.asset(
                     'assets/imgs/pets.png',
+                    height: 160,
+                    width: 160,
                     semanticLabel: 'image_pet'.tr(),
+                    fit: BoxFit.contain,
                   ),
                 ],
               ),

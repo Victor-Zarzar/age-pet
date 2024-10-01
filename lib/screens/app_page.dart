@@ -1,3 +1,4 @@
+import 'package:age_pet/controller/notification_controller.dart';
 import 'package:age_pet/features/app_theme.dart';
 import 'package:age_pet/screens/carousel_page.dart';
 import 'package:age_pet/screens/cat_page.dart';
@@ -23,6 +24,13 @@ class _AppPageState extends State<AppPage> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     tabController = TabController(length: 5, vsync: this);
+
+    // Notification Weekly //
+    NotificationService.showWeeklyNotification(
+      title: 'title_notification'.tr(),
+      body: 'body_notification'.tr(),
+      payload: 'rate_app',
+    );
   }
 
   @override

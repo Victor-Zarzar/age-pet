@@ -53,6 +53,32 @@ class NotificationService {
     );
   }
 
+  static Future<void> showWeeklyNotification({
+    required String title,
+    required String body,
+    required String payload,
+  }) async {
+    const AndroidNotificationDetails androidNotificationDetails =
+        AndroidNotificationDetails('weekly_channel_id', 'Weekly Notifications',
+            channelDescription: 'Weekly Notification Channel',
+            importance: Importance.max,
+            priority: Priority.high,
+            ticker: 'ticker');
+
+    const NotificationDetails notificationDetails =
+        NotificationDetails(android: androidNotificationDetails);
+
+    await flutterLocalNotificationsPlugin.periodicallyShow(
+      2,
+      title,
+      body,
+      RepeatInterval.weekly,
+      notificationDetails,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      payload: payload,
+    );
+  }
+
   static Future<void> scheduleNotification(
       int id, String title, String body, DateTime scheduledTime) async {
     await flutterLocalNotificationsPlugin.zonedSchedule(

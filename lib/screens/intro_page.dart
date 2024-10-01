@@ -62,6 +62,7 @@ class _IntroPageState extends State<IntroPage> {
                         : FontTextColor.secondaryColor,
                     fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
                     fontSize: 11,
+                    fontWeight: FontWeight.bold,
                   ),
                   color: isDarkMode
                       ? ButtonColor.secondaryColor

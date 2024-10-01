@@ -2,6 +2,8 @@
   "intro_title": "Calculate your pet's age",
   "intro_button": "Get Started",
   "text_appbar": "Pet Calculator",
+  "title_notification": "Do you like our app?",
+  "body_notification": "Rate us in the store!",
   "cat": "Cat",
   "dog": "Dog",
   "photos": "Photos",
